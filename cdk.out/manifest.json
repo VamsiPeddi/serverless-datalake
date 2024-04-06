@@ -1,0 +1,214 @@
+{
+  "version": "33.0.0",
+  "artifacts": {
+    "ServerlessDataLakeStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "ServerlessDataLakeStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "ServerlessDataLakeStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "ServerlessDataLakeStack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a834277d7633368e3ccfe4a57594cf2070bbfcf6b78be04c42f28049caffa6fb.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "ServerlessDataLakeStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "ServerlessDataLakeStack.assets"
+      ],
+      "metadata": {
+        "/ServerlessDataLakeStack/TASKROLE/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TASKROLEA2089027"
+          }
+        ],
+        "/ServerlessDataLakeStack/ARTIFACTBUCKET/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ARTIFACTBUCKET3AC4D6FF"
+          }
+        ],
+        "/ServerlessDataLakeStack/ARTIFACTBUCKET/Notifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ARTIFACTBUCKETNotificationsE20F7999"
+          }
+        ],
+        "/ServerlessDataLakeStack/dead_letter_queue_id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "deadletterqueueid33F4F000"
+          }
+        ],
+        "/ServerlessDataLakeStack/sample_queue_id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "samplequeueid4BAFF787"
+          }
+        ],
+        "/ServerlessDataLakeStack/sample_queue_id/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "samplequeueidPolicy8B12B2DB"
+          }
+        ],
+        "/ServerlessDataLakeStack/sample_queue_id/ServerlessDataLakeStacksamplesnstopicid3C1544C5/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "samplequeueidServerlessDataLakeStacksamplesnstopicid3C1544C504364E6D"
+          }
+        ],
+        "/ServerlessDataLakeStack/sample_sns_topic_id/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "samplesnstopicid1E9DA830"
+          }
+        ],
+        "/ServerlessDataLakeStack/sample_sns_topic_id/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "samplesnstopicidPolicyBC269BD9"
+          }
+        ],
+        "/ServerlessDataLakeStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+          }
+        ],
+        "/ServerlessDataLakeStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36"
+          }
+        ],
+        "/ServerlessDataLakeStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691"
+          }
+        ],
+        "/ServerlessDataLakeStack/startLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "startLambdaServiceRoleC7A6C624"
+          }
+        ],
+        "/ServerlessDataLakeStack/startLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "startLambdaServiceRoleDefaultPolicy6C06D8B5"
+          }
+        ],
+        "/ServerlessDataLakeStack/startLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "startLambda6A2880D9"
+          }
+        ],
+        "/ServerlessDataLakeStack/startLambda/SqsEventSource:ServerlessDataLakeStacksamplequeueid8365D18B/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "startLambdaSqsEventSourceServerlessDataLakeStacksamplequeueid8365D18BD389FE67"
+          }
+        ],
+        "/ServerlessDataLakeStack/runLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "runLambdaServiceRoleBA0AB335"
+          }
+        ],
+        "/ServerlessDataLakeStack/runLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "runLambda7F172227"
+          }
+        ],
+        "/ServerlessDataLakeStack/checkLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "checkLambdaServiceRole348B799B"
+          }
+        ],
+        "/ServerlessDataLakeStack/checkLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "checkLambda2957C81D"
+          }
+        ],
+        "/ServerlessDataLakeStack/StateMachine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StateMachineRoleB840431D"
+          }
+        ],
+        "/ServerlessDataLakeStack/StateMachine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StateMachineRoleDefaultPolicyDF1E6607"
+          }
+        ],
+        "/ServerlessDataLakeStack/StateMachine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StateMachine2E01A3A5"
+          }
+        ],
+        "/ServerlessDataLakeStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/ServerlessDataLakeStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/ServerlessDataLakeStack/Service-principalMap": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ServiceprincipalMap"
+          }
+        ],
+        "/ServerlessDataLakeStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/ServerlessDataLakeStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "ServerlessDataLakeStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
